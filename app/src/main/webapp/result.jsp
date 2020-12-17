@@ -1,6 +1,7 @@
 <%@ page contentType="text/html; UTF-8" language="java" %>
 
-<html>
+<!DOCTYPE>
+<html lang="ru">
   <head>
     <title>Teacher</title>
   </head>

@@ -14,4 +14,14 @@
         <url-pattern>/result</url-pattern>
     </servlet-mapping>
 
+<!--    <filter>-->
+<!--        <filter-name>UpperCase</filter-name>-->
+<!--        <filter-class>by.academy.web.filter.ParametersUpperCaseFilter</filter-class>-->
+<!--    </filter>-->
+<!---->
+<!--    <filter-mapping>-->
+<!--        <filter-name>UpperCase</filter-name>-->
+<!--        <servlet-name>UserController</servlet-name>-->
+<!--    </filter-mapping>-->
+
 </web-app>
