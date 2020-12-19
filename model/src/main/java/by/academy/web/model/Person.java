@@ -1,8 +1,7 @@
 package by.academy.web.model;
 
-import java.util.Objects;
-
-public abstract class Person implements Printable{
+public abstract class Person implements Printable {
+    private Long id;
     private String name;
     private int age;
 
@@ -12,6 +11,20 @@ public abstract class Person implements Printable{
     public Person(String name, int age) {
         this.name = name;
         this.age = age;
+    }
+
+    public Person(Long id, String name, int age) {
+        this.id = id;
+        this.name = name;
+        this.age = age;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getName() {
@@ -33,18 +46,20 @@ public abstract class Person implements Printable{
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (!(o instanceof Person)) return false;
 
         Person person = (Person) o;
 
-        if (age != person.age) return false;
-        return Objects.equals(name, person.name);
+        if (getAge() != person.getAge()) return false;
+        if (!getId().equals(person.getId())) return false;
+        return getName().equals(person.getName());
     }
 
     @Override
     public int hashCode() {
-        int result = name != null ? name.hashCode() : 0;
-        result = 31 * result + age;
+        int result = getId().hashCode();
+        result = 31 * result + getName().hashCode();
+        result = 31 * result + getAge();
         return result;
     }
 

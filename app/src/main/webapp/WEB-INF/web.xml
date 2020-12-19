@@ -9,10 +9,24 @@
         <jsp-file>/result.jsp</jsp-file>
     </servlet>
 
+    <servlet>
+        <servlet-name>AverageSalary</servlet-name>
+        <jsp-file>/average-salary.jsp</jsp-file>
+    </servlet>
+
     <servlet-mapping>
         <servlet-name>ResultJsp</servlet-name>
         <url-pattern>/result</url-pattern>
     </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>AverageSalary</servlet-name>
+        <url-pattern>/average</url-pattern>
+    </servlet-mapping>
+
+    <listener>
+        <listener-class>by.academy.web.listener.ResultJspListener</listener-class>
+    </listener>
 
 <!--    <filter>-->
 <!--        <filter-name>UpperCase</filter-name>-->

@@ -14,8 +14,8 @@ public class Student extends Person {
 
     }
 
-    public Student(String name, int age) {
-        super(name, age);
+    public Student(long id, String name, int age) {
+        super(id, name, age);
     }
 
     @Override

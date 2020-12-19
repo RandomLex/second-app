@@ -10,8 +10,12 @@ public class Teacher extends Person {
         super(name, age);
     }
 
-    public Teacher(String name, int age, int salary) {
-        this(name, age);
+    public Teacher(long id, String name, int age) {
+        super(id, name, age);
+    }
+
+    public Teacher(long id, String name, int age, int salary) {
+        this(id, name, age);
         this.salary = salary;
     }
 
